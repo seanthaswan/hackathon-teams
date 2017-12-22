@@ -3,28 +3,86 @@
   <head>
     <title>Hackathon Teams</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
   </head>
   <body>
+
     <div class="container">
-      <h1>Ceattle Sity Hackathon</h1>
+    <header style="height:80px;"></header>
+    <nav class="navbar navbar-inverse bs-dark">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="https://vignette.wikia.nocookie.net/clubpenguin/images/2/28/Emerald_Treasure_Hunt.png/revision/latest?cb=20130415151053"></a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li class="active"><a href="/">Home<span class="sr-only">(current)</span></a></li>
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Explore<span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="/teams">See Teams</a></li>
+                <li><a href="/teams/new">Sign Up!</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Contact</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Gallery</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Videos</a></li>
+              </ul>
+            </li>
+          </ul>
+          <form class="navbar-form navbar-left form-horizontal" role="search">
+              <div class="input-group">
+                 <input type="text" class="search-box" placeholder="Search">
+                 <button type="submit" class="btn"><span class="glyphicon glyphicon-search"></span></button>
+              </div>
+          </form>
+          <ul class="nav navbar-nav navbar-right">
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle navbar-img" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+              Account 
+              <img src="http://placehold.it/150x150" class="img-circle" alt="Profile Image" />
+              </a>
+              <ul class="dropdown-menu">
+                <li><a href="#">Profile</a></li>
+                <li><a href="#">Inbox</a></li>
+                <li><a href="#">Followers</a></li>
+                <li role="separator" class="divider"></li>
+                <li><a href="#">Settings</a></li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+
+    <div class="text-center container">
+
       <%- body %>
 
       <ul class="list-inline">
         <li>
-          <a class="btn btn-primary" href="/">Home</a>
+          <a class="btn btn-lg btn-primary" href="/">Home</a>
         </li>
 
         <li>
-          <a class="btn btn-primary" href="/teams">See teams</a>
+          <a class="btn btn-lg btn-primary" href="/teams">See teams</a>
         </li>
 
         <li>
-          <a class="btn btn-primary" href="/teams/new">Sign Up</a>
+          <a class="btn btn-lg btn-primary" href="/teams/new">Sign Up</a>
         </li>
       </ul>
     </div>
 
-    <script src="https://code.jquery.com/jquery-2.2.3.min.js" integrity="sha256-a23g1Nt4dtEYOj7bR+vTu7+T8VP13humZFBJNIYoEJo=" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="/js/teams-ajax.js"></script>
   </body>
 </html>
